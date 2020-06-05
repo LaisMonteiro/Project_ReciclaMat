@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 
 function App() {
-  return <div className="App">Home teste</div>;
+  return <div className="App">Home</div>;
 }
 
 export default App;
