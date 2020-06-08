@@ -9,7 +9,11 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
   <React.StrictMode>
     {/* <Provider store={store}> */}
+<<<<<<< HEAD
       <App />
+=======
+    <App />
+>>>>>>> 8e2e76e5d86f4d267bcb1319d49a9f094a839b2f
     {/* </Provider> */}
   </React.StrictMode>,
   document.getElementById('root')
