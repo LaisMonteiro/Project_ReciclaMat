@@ -2,7 +2,6 @@ import React from 'react';
 import './style.css';
 // import tree from '../../../public/images/tree.svg';
 
-
 const LandingPage = () => {
   return (
     <div className="landing-page-container">
@@ -31,7 +30,10 @@ const LandingPage = () => {
         <hr />
       </section>
       <section className="social-section">
-        <h3>Conheça o trabalho incrível de artesãos que utilizam materiais recicláveis!</h3>
+        <h3>
+          Conheça o trabalho incrível de artesãos que utilizam materiais
+          recicláveis!
+        </h3>
         <div className="image-cards">
           <div className="card">
             <img
