@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 // import tree from '../../../public/images/tree.svg';
-import SimpleMap from './../../components/SimpleMap';
+
 
 const LandingPage = () => {
   return (
@@ -54,7 +54,6 @@ const LandingPage = () => {
         </div>
       </section>
       <footer>@copyright</footer>
-      <SimpleMap />
     </div>
   );
 };
