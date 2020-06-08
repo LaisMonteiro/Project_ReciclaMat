@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+/* import { createSlice } from '@reduxjs/toolkit';
 
 export const counterSlice = createSlice({
   name: 'counter',
@@ -40,3 +40,4 @@ export const incrementAsync = (amount) => (dispatch) => {
 export const selectCount = (state) => state.counter.value;
 
 export default counterSlice.reducer;
+ */
