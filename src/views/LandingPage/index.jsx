@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-// import tree from '../../../public/images/tree.svg';
+
 
 const LandingPage = () => {
   return (

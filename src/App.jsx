@@ -9,7 +9,7 @@ import PostAdd from './views/Post/postAdd';
 import EditProfile from './views/Profile/editProfile';
 import Profile from './views/Profile/profile';
 import Search from './views/Search/index';
-import SimpleMap from './components/SimpleMap';
+// import SimpleMap from './components/SimpleMap';
 
 function App() {
   return (
@@ -29,5 +29,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
