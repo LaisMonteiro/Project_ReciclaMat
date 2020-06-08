@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 // import tree from '../../../public/images/tree.svg';
+import SimpleMap from './../../components/SimpleMap';
 
 const LandingPage = () => {
   return (
@@ -30,10 +31,7 @@ const LandingPage = () => {
         <hr />
       </section>
       <section className="social-section">
-        <h3>
-          Conheça o trabalho incrível de artesãos que utilizam materiais
-          recicláveis!
-        </h3>
+        <h3>Conheça o trabalho incrível de artesãos que utilizam materiais recicláveis!</h3>
         <div className="image-cards">
           <div className="card">
             <img
@@ -56,6 +54,7 @@ const LandingPage = () => {
         </div>
       </section>
       <footer>@copyright</footer>
+      <SimpleMap />
     </div>
   );
 };
