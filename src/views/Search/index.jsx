@@ -1,11 +1,11 @@
 import React from 'react';
 import './style.scss';
 
-const EditProfile = () => {
+const Search = () => {
   return (
     <div>
-      <h1>Página EditProfile</h1>
+      <h1>Página Search</h1>
     </div>
   );
 };
-export default EditProfile;
+export default Search;
