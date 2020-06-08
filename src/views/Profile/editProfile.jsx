@@ -4,7 +4,7 @@ import './style.scss';
 const EditProfile = () => {
   return (
     <div>
-      <h1>Página EditProfile</h1>
+      <h1>Página EditProfile....</h1>
     </div>
   );
 };
