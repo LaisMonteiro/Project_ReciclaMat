@@ -1,11 +1,11 @@
 import React from 'react';
 import './style.scss';
 
-const EditProfile = () => {
+const PostView = () => {
   return (
     <div>
-      <h1>Página EditProfile</h1>
+      <h1>Página de Post view</h1>
     </div>
   );
 };
-export default EditProfile;
+export default PostView;
