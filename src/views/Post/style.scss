@@ -1,0 +1,17 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.post-add-buttons {
+  background-color: #2fb86e;
+  border-color: #2fb86e;
+}
+
+.card-title {
+  color: #2fb86e;
+  font-size: 1em;
+  font-weight: 500;
+}
