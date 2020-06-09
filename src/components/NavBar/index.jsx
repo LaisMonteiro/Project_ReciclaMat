@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className="nav-container">
       <nav>
         <h1>RECICLAMAT</h1>
-        <p><Link to="/signIn">Entrar</Link></p>
+        <Link to="/signIn">Entrar</Link>
       </nav>
     </div>
   );
