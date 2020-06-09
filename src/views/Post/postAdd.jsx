@@ -10,7 +10,7 @@ import {
   CardGroup
 } from 'react-bootstrap';
 
-import './index';
+// import './PostCreate/index';
 
 // import SimpleMap from '../../components/Map/SimpleMap';
 

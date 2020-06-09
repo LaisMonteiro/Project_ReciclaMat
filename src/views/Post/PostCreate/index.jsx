@@ -1,6 +1,5 @@
 import React from 'react';
 import './style.scss';
-import SimpleMap from '../../components/Map/SimpleMap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
 
