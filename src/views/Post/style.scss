@@ -5,6 +5,23 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+.materials-container {
+  margin: 0;
+  padding: 0;
+}
+.materials {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .card {
+    width: 150px;
+  }
+  .card-body {
+    padding: 5px;
+  }
+}
 .post-add-buttons {
   background-color: #2fb86e;
   border-color: #2fb86e;
@@ -15,3 +32,5 @@ body {
   font-size: 1em;
   font-weight: 500;
 }
+
+
