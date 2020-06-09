@@ -25,7 +25,7 @@ const PostView = () => {
         <strong>Select your location </strong>
       </p>
 
-      <SimpleMap />
+      
       <Button id="button" size="md" block variant="primary" type="submit">
         Post
       </Button>
