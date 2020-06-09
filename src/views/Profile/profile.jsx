@@ -13,9 +13,9 @@ const Profile = () => {
   const fetchData = () => {
     setLoading(true);
     axios
-      .get('')
-      .then((data) => {
-        setData(data);
+      .get('http://localhost:3010/api/users')
+      .then((result) => {
+        setData(result);
         setLoading(false);
       })
       .catch((error) => {
@@ -26,23 +26,22 @@ const Profile = () => {
 
   return (
     <div>
-      {isLoading ? (
-        <h1>Loading...</h1>
-      ) : (
-        data.map((user) => {
-          return (
-            <div className="box">
-              <img src={user.avatar} alt="" />
-              <div>
-                <h5>{user.name}</h5>
-                <small>Contact: {user.email}</small>
-                <button className="edit">Edit</button>
-              </div>
-            </div>
-          );
-        })
-      )}
-
+      {
+        isLoading ? <h1>Loading...</h1> : console.log(data)
+        // ) : (
+        //   data.map((users) => {
+        //     return (
+        //       <div className="box">
+        //         <img src={users.avatar} alt="" />
+        //         <div>
+        //           <h5>{users.name}</h5>
+        //           <small>Contact: {users.email}</small>
+        //           <button className="edit">Edit</button>
+        //         </div>
+        //       </div>
+        //     );
+      }
+      ) )}
       <div>
         <p>My items:</p>
         <Card style={{ width: '18rem' }}>

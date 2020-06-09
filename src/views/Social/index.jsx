@@ -1,12 +1,12 @@
 import React from 'react';
 import './styles.scss';
-import { Card } from 'react-bootstrap';
+// import { Card } from 'react-bootstrap';
 
 const Social = () => {
   return (
     <div className="social-container">
       {/* for para cada post */}
-<div className="social-post">
+      <div className="social-post">
         <div className="photo-name-post">
           <img
             src="https://images.unsplash.com/photo-1582805661675-44eb8920a653?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80"
@@ -22,7 +22,7 @@ const Social = () => {
         ></img>
         <p className="post-description">description</p>
       </div>
-{/*       <Card style={{ width: '18rem' }}>
+      {/*       <Card style={{ width: '18rem' }}>
       <div className="photo-name-post">
           <img
             src="https://images.unsplash.com/photo-1582805661675-44eb8920a653?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80"

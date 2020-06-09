@@ -1,14 +1,7 @@
 import React from 'react';
 import './style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {
-  Button,
-  Form,
-  Card,
-  ListGroup,
-  ListGroupItem,
-  CardGroup 
-} from 'react-bootstrap';
+import { Card, CardGroup } from 'react-bootstrap';
 
 // import './PostCreate/index';
 
@@ -117,55 +110,82 @@ function PostMaterial() {
       </CardGroup> */}
       <CardGroup className="materials">
         <Card>
-          <Card.Img variant="top" src="https://images.unsplash.com/photo-1481761289552-381112059e05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160" />
+          <Card.Img
+            variant="top"
+            src="https://images.unsplash.com/photo-1481761289552-381112059e05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160"
+          />
           <Card.Body>
             <Card.Title>Card title</Card.Title>
           </Card.Body>
         </Card>
         <Card>
-          <Card.Img variant="top" src="https://images.unsplash.com/photo-1571727153934-b9e0059b7ab2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160" />
+          <Card.Img
+            variant="top"
+            src="https://images.unsplash.com/photo-1571727153934-b9e0059b7ab2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160"
+          />
           <Card.Body>
             <Card.Title>Card title</Card.Title>
           </Card.Body>
         </Card>
         <Card>
-          <Card.Img variant="top" src="https://images.unsplash.com/photo-1576834975354-ee694be1f0d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160" />
+          <Card.Img
+            variant="top"
+            src="https://images.unsplash.com/photo-1576834975354-ee694be1f0d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160"
+          />
           <Card.Body>
             <Card.Title>Card title</Card.Title>
           </Card.Body>
         </Card>
         <Card>
-          <Card.Img variant="top" src="https://images.unsplash.com/photo-1504711331083-9c895941bf81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160" />
+          <Card.Img
+            variant="top"
+            src="https://images.unsplash.com/photo-1504711331083-9c895941bf81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160"
+          />
           <Card.Body>
             <Card.Title>Card title</Card.Title>
           </Card.Body>
         </Card>
         <Card>
-          <Card.Img variant="top" src="https://images.unsplash.com/photo-1514212586585-6a0e1838e7bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160" />
+          <Card.Img
+            variant="top"
+            src="https://images.unsplash.com/photo-1514212586585-6a0e1838e7bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160"
+          />
           <Card.Body>
             <Card.Title>Card title</Card.Title>
           </Card.Body>
         </Card>
         <Card>
-          <Card.Img variant="top" src="https://images.unsplash.com/photo-1573209680076-bd7ec7007616?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160" />
+          <Card.Img
+            variant="top"
+            src="https://images.unsplash.com/photo-1573209680076-bd7ec7007616?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160"
+          />
           <Card.Body>
             <Card.Title>Card title</Card.Title>
           </Card.Body>
         </Card>
         <Card>
-          <Card.Img variant="top" src="https://images.unsplash.com/photo-1504711331083-9c895941bf81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160" />
+          <Card.Img
+            variant="top"
+            src="https://images.unsplash.com/photo-1504711331083-9c895941bf81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160"
+          />
           <Card.Body>
             <Card.Title>Card title</Card.Title>
           </Card.Body>
         </Card>
         <Card>
-          <Card.Img variant="top" src="https://images.unsplash.com/photo-1504711331083-9c895941bf81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160" />
+          <Card.Img
+            variant="top"
+            src="https://images.unsplash.com/photo-1504711331083-9c895941bf81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160"
+          />
           <Card.Body>
             <Card.Title>Card title</Card.Title>
           </Card.Body>
         </Card>
         <Card>
-          <Card.Img variant="top" src="https://images.unsplash.com/photo-1504711331083-9c895941bf81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160" />
+          <Card.Img
+            variant="top"
+            src="https://images.unsplash.com/photo-1504711331083-9c895941bf81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=201&q=160"
+          />
           <Card.Body>
             <Card.Title>Card title</Card.Title>
           </Card.Body>
