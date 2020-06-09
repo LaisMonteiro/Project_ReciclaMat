@@ -7,7 +7,7 @@ import {
   Card,
   ListGroup,
   ListGroupItem,
-  CardGroup
+  CardGroup 
 } from 'react-bootstrap';
 
 // import './PostCreate/index';
