@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form } from 'react-bootstrap';
@@ -37,7 +36,7 @@ const AuthenticationSignUp = (props) => {
       .post('http://localhost:3010/api/users', data)
       .then((user) => {
         console.log(user);
-        props.history.push('/');
+        props.history.push('/posts');
       })
       .catch((error) => console.log(error));
   }

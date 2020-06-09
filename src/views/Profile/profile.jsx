@@ -26,7 +26,7 @@ const Profile = () => {
   return (
     <div>
       {isLoading ? (
-        <h1>Loading...</h1>
+        <small>loading...</small>
       ) : (
         data.map((user) => {
           return (

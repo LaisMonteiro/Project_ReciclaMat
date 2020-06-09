@@ -47,7 +47,7 @@ const PostList = () => {
       </div>
       <div>
         {isLoading ? (
-          <h1>loading...</h1>
+          <small>loading...</small>
         ) : (
           data.map((post) => {
             return (
