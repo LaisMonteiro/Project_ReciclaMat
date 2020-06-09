@@ -46,14 +46,14 @@ const AuthenticationSignUp = () => {
         <Form.Group>
           <Form.Control
             type="text"
-            placeholder="Normal text"
+            placeholder="Name"
             name="name"
             id="name"
             onChange={handleInputChange}
           />
           <Form.Control
             type="email"
-            placeholder="Enter email"
+            placeholder="email"
             name="email"
             id="email"
             onChange={handleInputChange}

@@ -3,11 +3,13 @@
   padding: 0;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  flex-direction: column;
+button {
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
+
 
 .landing-page-container {
   display: flex;
@@ -43,6 +45,7 @@ body {
     z-index: 4;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
+    z-index: 3;
   }
 
   .black-image {
