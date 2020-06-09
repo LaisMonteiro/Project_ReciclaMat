@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Form, Card, ListGroup, ListGroupItem, CardGroup } from 'react-bootstrap';
+import { Card, CardGroup } from 'react-bootstrap';
 
 import './index';
 
