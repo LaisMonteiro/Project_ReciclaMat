@@ -6,33 +6,39 @@
 .post-create-container {
   display: flex;
   flex-direction: column;
-  .span {
-    padding-left: 1em;
-    padding-right: 1em;
-    position: relative; //to center buttons
-    top: 20%;
-    left: 15%;
-    margin-left: auto;
+  font-size: 0.8em;
+  .button-section {
+    background-color: #2fb86e;
+    padding: 5px 0;
+    button {
+      width: 33%;
+      height: 30px;
+      border: none;
+      background-color: #2fb86e;
+      color: white;
+      z-index: 4;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1em;
+      z-index: 3;
+    }
   }
+  form {
+    margin-top: 0;
+  }
+  // .span {
+  //   padding-left: 1em;
+  //   padding-right: 1em;
+  //   position: relative; //to center buttons
+  //   top: 20%;
+  //   left: 15%;
+  //   margin-left: auto;
+  // }
 
   // .button-section {
   //   display: flex;
   //   flex-direction: row;
   // }
-  .post-add-buttons {
-    margin-top: 1em;
-    margin-bottom: 2em;
-    color: #fff;
-    background-color: #2fb86e;
-    width: 120px;
-    height: 30px;
-    border-radius: 5px;
-    border: none;
-    background-color: #2fb86e;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    z-index: 3;
-  }
+
   .post-add-buttons:active {
     vertical-align: top;
     padding: 8px 13px 6px;
@@ -83,13 +89,27 @@
     display: inline;
   }
 
-  .location {
-    text-align: center;
+  .location-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    .map-container {
+      display: flex;
+      align-self: center;
+      width: 100%;
+      height: 300px;
+      border-radius: 20px;
+    }
   }
 
-  .map-container {
-    display: flex;
-    width: 100%;
-    height: 300px;
+  .post-button {
+    margin: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #2fb86e;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
   }
 }

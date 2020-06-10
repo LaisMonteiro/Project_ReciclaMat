@@ -25,11 +25,19 @@ function App() {
         <Switch>
           <Route
             path="/signin"
-            render={(props) => <AuthenticationSignIn {...props} updateUser={updateUser} />}
+            render={(props) => (
+              <AuthenticationSignIn {...props} updateUser={updateUser} />
+            )}
           />
           <Route exact path="/signup" component={AuthenticationSignUp} />
           <Route exact path="/posts" component={PostList} />
-          <Route exact path="/post/add" component={PostCreate} />
+          <Route
+            exact
+            path="/post/add"
+            render={(props) => (
+              <PostCreate {...props} loggedUser={loggedUser} />
+            )}
+          />
           <Route exact path="/profile/:id" component={Profile} />
           <Route exact path="/search" component={Search} />
           <Route exact path="/" component={LandingPage} />

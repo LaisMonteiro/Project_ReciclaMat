@@ -1,24 +1,27 @@
-import React from 'react';
-import { Form, Button } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Form } from 'react-bootstrap';
+import Dropzone from '../DropZone';
 
-const PostProducts = () => {
+const PostProducts = (props) => {
+  function handleTextArea(event){
+    const {name, value} = event.target;
+    props.handleFormData(name,value);
+  }
+
+  function productFileUploaded(file){
+    props.handleFormData('image', file);
+  }
+
   return (
-    <div>
-      <h1>Create your post:</h1>
+    <div className="post-products-container">
       <Form>
-        <div className="mb-3">
-          <Form.File id="formcheck-api-regular">
-            <Form.File.Label>Upload the photo</Form.File.Label>
-            <Form.File.Input />
-          </Form.File>
-          <Form.Group controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Description of your post: </Form.Label>
-            <Form.Control as="textarea" rows="3" />
-          </Form.Group>
-          <Button id="button" size="md" block variant="primary" type="submit">
-            Post
-          </Button>
-        </div>
+        <Form.Group>
+          <Dropzone onFileUploaded={productFileUploaded} />
+        </Form.Group>
+        <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Label>Description of your post: </Form.Label>
+          <Form.Control as="textarea" rows="3" name="description" onChange={handleTextArea}/>
+        </Form.Group>
       </Form>
     </div>
   );
