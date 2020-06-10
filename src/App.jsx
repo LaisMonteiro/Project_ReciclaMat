@@ -5,7 +5,6 @@ import LandingPage from './views/LandingPage';
 import PostList from './views/Post/PostList';
 import PostCreate from './views/Post/PostCreate';
 import Profile from './views/Profile/profile';
-import Social from './views/Social';
 import Search from './views/Search/index';
 // import SimpleMap from './components/SimpleMap';
 import './App.scss';
@@ -33,7 +32,6 @@ function App() {
           <Route exact path="/post/add" component={PostCreate} />
           <Route exact path="/profile/:id" component={Profile} />
           <Route exact path="/search" component={Search} />
-          <Route exact path="/social" component={Social} />
           <Route exact path="/" component={LandingPage} />
         </Switch>
       </BrowserRouter>

@@ -5,7 +5,7 @@ import { Button, Form } from 'react-bootstrap';
 import axios from 'axios';
 import Dropzone from '../../../components/DropZone';
 
-const AuthenticationSignUp = () => {
+const AuthenticationSignUp = (props) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,7 +27,7 @@ const AuthenticationSignUp = () => {
     data.append('name', name);
     data.append('email', email);
     data.append('password', password);
-    
+
     if (selectedFile) {
       data.append('avatar', selectedFile);
     }
@@ -36,6 +36,7 @@ const AuthenticationSignUp = () => {
       .post('http://localhost:3010/api/users', data)
       .then((user) => {
         console.log(user);
+        props.history.push('/posts');
       })
       .catch((error) => console.log(error));
   }

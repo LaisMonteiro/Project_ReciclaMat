@@ -1,59 +1,59 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import './style.scss';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { listPosts } from '../../../services/posts';
 
 const PostList = () => {
   const [isLoading, setLoading] = useState(true);
-  const [data, setData] = useState(null);
+  const [posts, setPosts] = useState([]);
 
-  const fetchData = () => {
-    setLoading(true);
-    axios
-      .get('http://localhost:3010/api/post')
-      .then((data) => {
-        setData(data.data.post);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  const handleKindSubmit = (event) => {
+    event.preventDefault();
+    listPosts(event.target.name).then((res) => setPosts(res));
   };
 
-  const searchKind = () => {
+  useEffect(() => {
     setLoading(true);
-    axios
-      .get('http://localhost:3010/api/post')
-      .then((result) => {
-        console.log(result.data.post);
-        // setData(data.filter((typeKind) => typeKind === ))
-        // const kind = data.data.post.kind;
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
-  useEffect(() => fetchData(), []);
+    listPosts().then((res) => {
+      setLoading(false);
+      console.log(res)
+      setPosts(res);
+    });
+  }, []);
 
   return (
-    <div>
-      <div>
-        <button onClick={() => fetchData()}>Produtos</button>
-        <button onClick={() => searchKind()}>Doando</button>
-        <button>Recebendo</button>
+    <div className="social-container">
+      <div className="buttons-container">
+        <button onClick={handleKindSubmit} name="produtos">
+          Produtos
+        </button>
+        <button className="donate-btn" onClick={handleKindSubmit} name="doar">
+          Doando
+        </button>
+        <button onClick={handleKindSubmit} name="receber">
+          Recebendo
+        </button>
       </div>
       <div>
         {isLoading ? (
-          <h1>loading...</h1>
+          <small>loading...</small>
         ) : (
-          data.map((post) => {
+          posts.map((post) => {
             return (
-              <div key={post._id}>
-                <img src={post.image} alt="" />
-                <li>{post.kind}</li>
+              <div key={post._id} className="social-post">
+                <div className="photo-name-post">
+                  <img
+                    src={post.userCreator.avatar}
+                    alt=""
+                    className="user-image"
+                  />
+                  <p className="post-creator">{post.userCreator.name}</p>
+                </div>
+                <img src={post.image} alt="" className="post-image" />
+                <small>{post.kind}</small>
+                <p className="post-description">{post.description}</p>
               </div>
             );
           })
