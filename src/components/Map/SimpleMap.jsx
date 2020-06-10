@@ -37,7 +37,6 @@ class SimpleMap extends Component {
       <div className="map">
         <GoogleMap
           apiKey={process.env.REACT_APP_key}
-          style={{ height: '100vh', width: '100%' }}
           defaultCenter={{
             lat: 38.75,
             lng: -9

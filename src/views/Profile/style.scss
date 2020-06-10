@@ -1,24 +1,26 @@
-h5,
-small,
-p {
-  align-items: flex-start;
-}
-.box {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-}
-.edit {
-  border: none;
-  background-color: transparent;
-  display: flex;
-}
-.delete {
-  border: none;
-  background-color: transparent;
-}
-img {
-  max-width: 50px;
-  max-height: 50px;
-  border-radius: 50%;
+.profile-container {
+  h5,
+  small,
+  p {
+    align-items: flex-start;
+  }
+  .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+  .edit {
+    border: none;
+    background-color: transparent;
+    display: flex;
+  }
+  .delete {
+    border: none;
+    background-color: transparent;
+  }
+  img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+  }
 }

@@ -24,7 +24,7 @@ const Profile = () => {
   useEffect(() => fetchData(), []);
 
   return (
-    <div>
+    <div className="profile-container">
       {isLoading ? (
         <small>loading...</small>
       ) : (
