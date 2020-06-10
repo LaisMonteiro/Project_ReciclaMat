@@ -5,11 +5,11 @@
     background-color: #2fb86e;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     color: #fff;
-    margin-bottom: 1em;
     padding: 1em;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    z-index: 99;
     h1 {
       padding-left: 10px;
       font-size: 1em;
@@ -17,7 +17,12 @@
     }
   }
 }
-#basic-nav-dropdown {
+
+.menu-container {
+  margin: 0;
+  padding: 0;
+}
+/* #basic-nav-dropdown {
   color: white;
   display: flex;
   justify-content: center;
@@ -37,4 +42,4 @@
   display: block;
   align-content: flex-end;
   justify-content: flex-end;
-}
+} */
