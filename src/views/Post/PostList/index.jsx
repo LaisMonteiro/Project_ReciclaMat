@@ -1,9 +1,6 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import axios from 'axios';
-import './style.scss';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useEffect, useState } from 'react';
 import { listPosts } from './../../../services/posts';
+import './style.scss';
 
 const PostList = () => {
   const [isLoading, setLoading] = useState(true);
@@ -16,9 +13,8 @@ const PostList = () => {
 
   useEffect(() => {
     setLoading(true);
-    listPosts().then((res) => {
+    listPosts('produtos').then((res) => {
       setLoading(false);
-      console.log(res);
       setPosts(res);
     });
   }, []);
@@ -44,7 +40,11 @@ const PostList = () => {
             return (
               <div key={post._id} className="social-post">
                 <div className="photo-name-post">
-                  <img src={post.userCreator.avatar} alt="" className="user-image" />
+                  <img
+                    src={post.userCreator.avatar}
+                    alt=""
+                    className="user-image"
+                  />
                   <p className="post-creator">{post.userCreator.name}</p>
                 </div>
                 <img src={post.image} alt="" className="post-image" />

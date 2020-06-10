@@ -16,17 +16,20 @@ const listPosts = (kind) => {
 };
 
 const createPost = (post) => {
-  
   const data = new FormData();
-  data.append('kind', 'produtos');
-  data.append('description', post.description);
-  data.append('userCreator', '5edf6ebef58e6848f4c3a0e8' );
-  data.append('location', post.location.join(','));
-
+  if (post.description) {
+    data.append('description', post.description);
+  }
   if (post.image) {
     data.append('image', post.image);
   }
-  console.log(data);
+  if (post.material) {
+    data.append('material', post.material);
+  }
+  data.append('kind', post.kind);
+  data.append('userCreator', '5edf6ebef58e6848f4c3a0e8');
+  data.append('location', post.location.join(','));
+
 
   return basePostsServices
     .post('', data)
