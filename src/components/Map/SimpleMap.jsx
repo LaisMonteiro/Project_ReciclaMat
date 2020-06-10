@@ -1,18 +1,8 @@
 import React, { Component } from 'react';
 import GoogleMap from 'google-map-react';
-// import MapLocation from './MapLocation';
 
 import './index.scss';
 
-// const AnyReactComponent = ({ text }) => <div>{text}</div>;
-/* GoogleMap.defaultProps = {
-  distanceToMouse: function distanceToMouse(pt, mousePos /* , markerProps ) {
-    return Math.sqrt(
-      (pt.x - mousePos.x) * (pt.x - mousePos.x) + (pt.y - mousePos.y) * (pt.y - mousePos.y)
-    );
-  }
-};
-*/
 class SimpleMap extends Component {
   constructor(props) {
     super(props);
@@ -20,14 +10,27 @@ class SimpleMap extends Component {
       marker: {
         lat: null,
         lng: null
+      },
+      initialPosition: {
+        lat: 0,
+        lng: 0
       }
     };
   }
 
-  handleMapClick = ({ x, y, lat, lng, event }) => {
-    console.log(event);
-    console.log(lat);
-    console.log(lng);
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition((position) =>
+      this.setState({
+        ...this.state,
+        initialPosition: {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        }
+      })
+    );
+  }
+
+  handleMapClick = ({ lat, lng }) => {
     this.setState({ marker: { lat, lng } });
     this.props.handleLocation(lat, lng);
   };
@@ -39,8 +42,8 @@ class SimpleMap extends Component {
         <GoogleMap
           apiKey={process.env.REACT_APP_key}
           defaultCenter={{
-            lat: 38.75,
-            lng: -9
+            lat: this.state.initialPosition.lat,
+            lng: this.state.initialPosition.lng
           }}
           defaultZoom={11}
           onClick={this.handleMapClick}
