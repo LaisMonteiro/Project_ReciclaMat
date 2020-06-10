@@ -6,7 +6,7 @@ const basePostsServices = axios.create({
 
 const listPosts = (kind) => {
   return basePostsServices
-    .get('', { params: {kind} })
+    .get('', { params: { kind } })
     .then((res) => {
       return Promise.resolve(res.data.post);
     })

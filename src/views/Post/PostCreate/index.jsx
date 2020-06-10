@@ -1,15 +1,15 @@
 import React from 'react';
 import './style.scss';
 import PostMaterials from './../../../components/Materials';
-import './style.scss';
-import SimpleMap from '../../../components/Map/SimpleMap'
 
+import './style.scss';
+import SimpleMap from '../../../components/Map/SimpleMap';
 
 const PostCreate = () => {
   return (
     <div className="post-create-container">
       <p className="title">Create your post</p>
-    
+
       <section className="button-section">
         <span className="span">
           <button className="post-add-buttons">Products</button>
@@ -22,10 +22,10 @@ const PostCreate = () => {
         </span>
       </section>
       <br />
+
       {/* <PostMaterials /> */}
       <p className="location">Select your location</p>
 
-      {/* map */}
       <div className="map-container">
         <SimpleMap />
       </div>
