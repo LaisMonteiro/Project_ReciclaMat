@@ -3,8 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navbar from './components/NavBar';
 import LandingPage from './views/LandingPage';
 import PostList from './views/Post/PostList';
-import PostView from './views/Post/PostCreate/index';
-import PostAdd from './views/Post/postAdd';
+import PostCreate from './views/Post/PostCreate';
 import Profile from './views/Profile/profile';
 import Social from './views/Social';
 import Search from './views/Search/index';
@@ -31,8 +30,7 @@ function App() {
           />
           <Route exact path="/signup" component={AuthenticationSignUp} />
           <Route exact path="/posts" component={PostList} />
-          <Route exact path="/post/add" component={PostView} />
-          <Route exact path="/post/add" component={PostAdd} />
+          <Route exact path="/post/add" component={PostCreate} />
           <Route exact path="/profile/:id" component={Profile} />
           <Route exact path="/search" component={Search} />
           <Route exact path="/social" component={Social} />
