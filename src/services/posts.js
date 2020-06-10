@@ -6,7 +6,7 @@ const basePostsServices = axios.create({
 
 const listPosts = (kind) => {
   return basePostsServices
-    .get('', { params: {kind} })
+    .get('', { params: { kind } })
     .then((res) => {
       return Promise.resolve(res.data.post);
     })
@@ -15,4 +15,15 @@ const listPosts = (kind) => {
     });
 };
 
-export { listPosts };
+const createPost = (post) => {
+  console.log(post);
+  /*
+  kind:produtos
+  material:aluminum
+  description:post test 2
+  userCreator:5ede769dc4e0686de8cc6eb3
+  location:30, -9
+  */
+};
+
+export { listPosts, createPost };

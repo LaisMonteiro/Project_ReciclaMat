@@ -14,8 +14,8 @@ import './index.scss';
 };
 */
 class SimpleMap extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       marker: {
         lat: null,
@@ -29,6 +29,7 @@ class SimpleMap extends Component {
     console.log(lat);
     console.log(lng);
     this.setState({ marker: { lat, lng } });
+    this.props.handleLocation(lat, lng);
   };
 
   render() {
