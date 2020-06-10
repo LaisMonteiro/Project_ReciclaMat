@@ -23,7 +23,7 @@ const AuthenticationSignIn = (props) => {
       .post('http://localhost:3010/api/authentication/sign-in', formData)
       .then((user) => {
         props.updateUser(user);
-        props.history.push('/');
+        props.history.push('/posts');
       })
       .catch((error) => console.log(error));
   }
