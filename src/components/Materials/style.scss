@@ -1,0 +1,80 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.material-img {
+  vertical-align: top;
+  border-radius: 5px;
+  width: 10em;
+  height: 8em;
+  margin: 1em;
+  box-shadow: 5px 5px 15px grey;
+}
+
+.materials-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+}
+.materials-row {
+  display: flex;
+  justify-content: column;
+}
+
+// .material-name {
+//   display: inline;
+//   text-align: center;
+// }
+
+// .materials-container {
+//   margin: 0;
+//   padding: 0;
+// }
+// .materials {
+//   width: 100%;
+//   flex-wrap: wrap;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   .card {
+//     width: 150px;
+//   }
+//   .card-body {
+//     padding: 5px;
+//   }
+// }
+// .post-add-buttons {
+//   background-color: #2fb86e;
+//   border-color: #2fb86e;
+// }
+
+.material-name {
+  text-align: center;
+  color: #2fb86e;
+  font-size: 1em;
+  font-weight: 500;
+  // display: block;
+  clear: left;
+  margin-top: 10px;
+  width: inherit;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+}
+
+// @media only screen and (min-width: 600px) {
+//   .box {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }

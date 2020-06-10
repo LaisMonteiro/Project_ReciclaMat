@@ -1,34 +1,38 @@
 import React from 'react';
 import './style.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
+import PostMaterials from './../../../components/Materials';
+import './style.scss';
+import SimpleMap from '../../../components/Map/SimpleMap'
 
-const PostView = () => {
+
+const PostCreate = () => {
   return (
-    <div>
-      <h1>Create a post</h1>
-      <div className="mb-2">
-        <Button className="post-add-buttons" variant="success">
-          Products
-        </Button>{' '}
-        <Button className="post-add-buttons" variant="success">
-          Donate
-        </Button>{' '}
-        <Button className="post-add-buttons" variant="success">
-          {' '}
-          Receive
-        </Button>{' '}
-        <br />
-      </div>
-      <p>
-        <strong>Select your location </strong>
-      </p>
+    <div className="post-create-container">
+      <p className="title">Create your post</p>
+    
+      <section className="button-section">
+        <span className="span">
+          <button className="post-add-buttons">Products</button>
+        </span>
+        <span className="span">
+          <button className="post-add-buttons">Donate</button>
+        </span>
+        <span className="span">
+          <button className="post-add-buttons">Receive</button>
+        </span>
+      </section>
+      <br />
+      {/* <PostMaterials /> */}
+      <p className="location">Select your location</p>
 
-      
-      <Button id="button" size="md" block variant="primary" type="submit">
-        Post
-      </Button>
+      {/* map */}
+      <div className="map-container">
+        <SimpleMap />
+      </div>
+      <span className="post-pos">
+        <button className="post">Post</button>
+      </span>
     </div>
   );
 };
-export default PostView;
+export default PostCreate;
