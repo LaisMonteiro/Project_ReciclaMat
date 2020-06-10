@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Navbar from './components/NavBar';
+import NavBar from './components/NavBar';
 import LandingPage from './views/LandingPage';
 import PostList from './views/Post/PostList';
 import PostView from './views/Post/PostCreate/index';
@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
+        <NavBar />
         <Switch>
           <Route
             path="/signin"
