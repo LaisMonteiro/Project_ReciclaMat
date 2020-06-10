@@ -4,7 +4,7 @@ import { createPost } from '../../../services/posts';
 import PostProducts from './../../../components/CreateProducts';
 import './style.scss';
 
-const PostCreate = () => {
+const PostCreate = (props) => {
   const [formData, setFormData] = useState({
     description: '',
     image: null,
@@ -30,7 +30,7 @@ const PostCreate = () => {
   };
 
   const handleSubmitForm = () => {
-    createPost(formData);
+    createPost({...formData, userCreator: props.loggedUser });
   };
 
   return (

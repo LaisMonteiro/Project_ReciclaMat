@@ -8,7 +8,7 @@ const listPosts = (kind) => {
   return basePostsServices
     .get('', { params: { kind } })
     .then((res) => {
-      return Promise.resolve(res.data.post);
+      return Promise.resolve(res.data);
     })
     .catch((error) => {
       return Promise.reject(error);
@@ -16,12 +16,35 @@ const listPosts = (kind) => {
 };
 
 const createPost = (post) => {
-  console.log(post);
+  
+  const data = new FormData();
+  data.append('kind', 'produtos');
+  data.append('description', post.description);
+  data.append('userCreator', '5edf6ebef58e6848f4c3a0e8' );
+  data.append('location', post.location.join(','));
+
+  if (post.image) {
+    data.append('image', post.image);
+  }
+  console.log(data);
+
+  return basePostsServices
+    .post('', data)
+    .then((res) => {
+      console.log(res);
+      return Promise.resolve(res.data);
+    })
+    .catch((error) => {
+      console.log(error);
+      return Promise.reject(error);
+    });
+
   /*
+
   kind:produtos
   material:aluminum
   description:post test 2
-  userCreator:5ede769dc4e0686de8cc6eb3
+  userCreator:5edf6ebef58e6848f4c3a0e8
   location:30, -9
   */
 };
