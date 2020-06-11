@@ -5,9 +5,11 @@ import './style.scss';
 const PostList = () => {
   const [isLoading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
+  const [selectedKind, setSelectedKind] = useState('produtos');
 
   const handleKindSubmit = (event) => {
     event.preventDefault();
+    setSelectedKind(event.target.name);
     listPosts(event.target.name).then((res) => setPosts(res));
   };
 
@@ -22,17 +24,31 @@ const PostList = () => {
   return (
     <div className="social-container">
       <div className="buttons-container">
-        <button onClick={handleKindSubmit} name="produtos">
+        <button
+          onClick={handleKindSubmit}
+          name="produtos"
+          className={selectedKind === 'produtos' && 'selected'}
+        >
           Produtos
         </button>
-        <button className="donate-btn" onClick={handleKindSubmit} name="doar">
+        <div class="divider"></div>
+        <button
+          onClick={handleKindSubmit}
+          name="doar"
+          className={selectedKind === 'doar' && 'selected'}
+        >
           Doando
         </button>
-        <button onClick={handleKindSubmit} name="receber">
+        <div class="divider"></div>
+        <button
+          onClick={handleKindSubmit}
+          name="receber"
+          className={selectedKind === 'receber' && 'selected'}
+        >
           Recebendo
         </button>
       </div>
-      <div>
+      <div class="posts">
         {isLoading ? (
           <small>loading...</small>
         ) : (
