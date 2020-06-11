@@ -1,18 +1,17 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import axios from 'axios';
-import './style.scss';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useEffect, useState } from 'react';
 import { listPosts } from './../../../services/posts';
 import { addComment } from './../../../services/comment';
 import Comment from './../../../components/Comment';
+import './style.scss';
 
 const PostList = () => {
   const [isLoading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
+  const [selectedKind, setSelectedKind] = useState('produtos');
 
   const handleKindSubmit = (event) => {
     event.preventDefault();
+    setSelectedKind(event.target.name);
     listPosts(event.target.name).then((res) => setPosts(res));
   };
 
@@ -24,15 +23,13 @@ const PostList = () => {
         }
       });
       setPosts([...posts]);
-      
     });
   };
 
   useEffect(() => {
     setLoading(true);
-    listPosts().then((res) => {
+    listPosts('produtos').then((res) => {
       setLoading(false);
-      console.log(res);
       setPosts(res);
     });
   }, []);
@@ -40,17 +37,31 @@ const PostList = () => {
   return (
     <div className="social-container">
       <div className="buttons-container">
-        <button onClick={handleKindSubmit} name="produtos">
+        <button
+          onClick={handleKindSubmit}
+          name="produtos"
+          className={selectedKind === 'produtos' && 'selected'}
+        >
           Produtos
         </button>
-        <button className="donate-btn" onClick={handleKindSubmit} name="doar">
+        <div class="divider"></div>
+        <button
+          onClick={handleKindSubmit}
+          name="doar"
+          className={selectedKind === 'doar' && 'selected'}
+        >
           Doando
         </button>
-        <button onClick={handleKindSubmit} name="receber">
+        <div class="divider"></div>
+        <button
+          onClick={handleKindSubmit}
+          name="receber"
+          className={selectedKind === 'receber' && 'selected'}
+        >
           Recebendo
         </button>
       </div>
-      <div>
+      <div class="posts">
         {isLoading ? (
           <small>loading...</small>
         ) : (

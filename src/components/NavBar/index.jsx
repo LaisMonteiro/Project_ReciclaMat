@@ -2,35 +2,24 @@ import React from 'react';
 import './style.scss';
 // import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, NavDropdown } from 'react-bootstrap';
+import { Navbar, NavDropdown, Nav } from 'react-bootstrap';
 
 const NavBar = () => {
   return (
     <div className="nav-container">
-      <nav>
-        <div>
-          <Navbar.Brand className="color-a-nav" href="/">
-            RECICLAMAT
-          </Navbar.Brand>
-        </div>
-        <div className="menu-dropdown">
-          {/* configurar o botao de ENTRAR (abaixo) quando o Authentication estiver pronto */}
-          {/* <Link to="/signIn">Entrar</Link> */}
-          <Navbar expand="lg" className="menu-container">
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <NavDropdown title="Menu" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/posts">Home</NavDropdown.Item>
-                <NavDropdown.Item href="/profile/:id">Profile</NavDropdown.Item>
-                <NavDropdown.Item href="/post/add">Create Post</NavDropdown.Item>
-                <NavDropdown.Item href="/search">Search Materials</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="/">Sign out</NavDropdown.Item>
-              </NavDropdown>
-            </Navbar.Collapse>
-          </Navbar>
-        </div>
-      </nav>
+      <Navbar collapseOnSelect expand="lg" variant="dark">
+        <Navbar.Brand href="/">RECICLAMAT</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="/posts">Posts</Nav.Link>
+            <Nav.Link href="/profile/:id">Profile</Nav.Link>
+            <Nav.Link href="/post/add">Create Post</Nav.Link>
+            <Nav.Link href="/search">Search Materials</Nav.Link>
+            <Nav.Link href="/">Sign out</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </div>
   );
 };
