@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import NavBar from './components/NavBar';
+import Navbar from './components/NavBar';
 import LandingPage from './views/LandingPage';
 import PostList from './views/Post/PostList';
 import PostCreate from './views/Post/PostCreate';
@@ -21,23 +21,15 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <NavBar />
+        <Navbar />
         <Switch>
           <Route
             path="/signin"
-            render={(props) => (
-              <AuthenticationSignIn {...props} updateUser={updateUser} />
-            )}
+            render={(props) => <AuthenticationSignIn {...props} updateUser={updateUser} />}
           />
           <Route exact path="/signup" component={AuthenticationSignUp} />
           <Route exact path="/posts" component={PostList} />
-          <Route
-            exact
-            path="/post/add"
-            render={(props) => (
-              <PostCreate {...props} loggedUser={loggedUser} />
-            )}
-          />
+          <Route exact path="/post/add" component={PostCreate} />
           <Route exact path="/profile/:id" component={Profile} />
           <Route exact path="/search" component={Search} />
           <Route exact path="/" component={LandingPage} />

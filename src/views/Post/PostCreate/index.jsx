@@ -47,7 +47,6 @@ const PostCreate = (props) => {
       <section className="location-container">
         <p>Select your location</p>
 
-        {/* map */}
         <div className="map-container">
           <SimpleMap handleLocation={handleLocation} />
         </div>
